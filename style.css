@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --main-font: 'Chakra Petch', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    background: #000000;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+
+.titulo{
+    color: #f6f6f6;
+    font-family: var(--main-font);
+    font-size: 50px;
+}
+
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.imagen{
+    padding: 5px;
+    margin: 25px;
+    width: 85px;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    margin: 0% 16%;
+    justify-content: space-between;
+}
+
+.presentacion__contenido{
+    width: 100%;  
+}
+
+.presentacion__mensaje .mensaje{
+
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 600px;
+    padding: 10px 0 0 10px;
+    background-image: url("/Imagenes/Ojo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    border-radius: 20px;
+    color: #3f3039;
+    background-position: center;
+    /*opacity: 0.8;*/
+
+}
+
+.opaca {
+    background-image: url("/Imagenes//ALIEN.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+   /* opacity: 0.2;  Ajusta la opacidad según tus necesidades */
+    
+}
+
+.boton__copiar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.text-area{
+    vertical-align: center;
+    border: none;
+    color:#25da34;
+  
+}
+
+
+::placeholder{color: #25da34;}
+    .text-area:focus{
+        outline: none;
+    }
+
+
+.mensaje:focus{
+    outline: none; 
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-encriptar{
+    background-color: #2fb60d;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+
+
+.copiar{
+    border: 1px solid #f6f6f6;
+    border-radius: 24px;
+    color: #f6f6f6;
+    cursor: pointer;
+    height: 67px;
+    position: relative;
+    width: 336px;
+}
+
+.informacion{
+    color: #495057;
+    font-size: 18px;
+}
+
+/* Pantallas grandes (1440px y más) */
+@media (min-width: 1440px) {
+    body {
+        font-size: 32px;
+    }
+}
+
+/* Pantallas medianas (1024px a 1439px) */
+@media (max-width: 1439px) {
+    body {
+        font-size: 28px;
+    }
+
+    .presentacion {
+        margin: 0 10%;
+    }
+
+    .presentacion__mensaje .mensaje {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+/* Pantallas pequeñas (768px a 1023px) */
+@media (max-width: 1023px) {
+    body {
+        font-size: 24px;
+    }
+
+    .copiar {
+        display: block; 
+        width: 100%; 
+        margin-top: 10px; 
+    }
+
+    .text-area {
+        height: 300px; /* Ajusta la altura del textarea para pantallas más pequeñas */
+    }
+    .presentacion {
+        flex-direction: column;
+        margin: 0 5%;
+    }
+
+    .presentacion__mensaje .mensaje {
+        background-size: cover; /* Hace que la imagen sea más ancha */
+    }
+
+
+
+   
+
+    
+    .btn-desencriptar, .btn-encriptar {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 20px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .imagen {
+        width: 45px;
+        margin: 10px;
+    }
+
+    .btn-desencriptar, .btn-encriptar {
+        height: 40px;
+        font-size: 14px;
+    }
+}
